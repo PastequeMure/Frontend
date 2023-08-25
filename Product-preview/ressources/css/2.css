@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url(../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'fraunces';
+    src: url(../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    left:50%;
+    top: calc(100% - 80%);
+    transform: translateX(-50%) ;
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.left {
+    display: flex;
+    opacity: 0;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation: leftElement 1s forwards;
+}
+
+.left .desk {
+    width: 100%;
+}
+
+.left .mobile {
+    display: none;
+}
+
+.right {
+    display: flex;
+    opacity: 0;
+    background-color: white;
+    flex-direction: column;
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: rightElement 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.right .desc-product {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.right .desc-product h1 {
+    color: hsl(212, 21%, 14%);
+    font-family: 'fraunces';
+    font-weight: 700;
+}
+
+.right .desc-product h4 {
+    color: hsl(228, 12%, 48%);
+    margin-top: 30px;
+    font-family: "montserrat";
+    font-size: small;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.right .desc-product p {
+    color: hsl(228, 12%, 48%);
+    font-family: 'montserrat';
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.right .desc-product .price {
+    display: flex;
+    align-items: center;
+}
+
+.right .desc-product .price h1 {
+    color: hsl(158, 36%, 37%);
+}
+
+.right .desc-product .price h4 {
+    margin: 0;
+    margin-left : 7%;
+    font-size: small;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-family: 'montserrat';
+    text-decoration: line-through;
+}
+
+.right .desc-product .btn {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:  hsl(158, 36%, 37%);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    animation: btnElement 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+.right .desc-product .btn:hover{
+    cursor: pointer;
+    background-color: hsl(156, 42%, 18%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.right .desc-product .btn:not(:hover) {
+    transition: all 0.3s ease-in-out;
+}
+
+.right .desc-product .btn img {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 610px) {
+    .card {
+        flex-direction: column;
+        top: calc(100% - 90%);
+        width: 345px;
+        height: auto;
+    }
+
+    .card .left{
+        width: 100%;
+        height: auto;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card .left .desk {
+        display: none;
+    }
+
+    .card .left .mobile {
+        display: block;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .card .right {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+@keyframes leftElement {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        filter: blur(100px);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        transform: translate(-100%, -50%);
+    } 
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transform: translate(0);
+    }
+    
+}
+
+@keyframes rightElement {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        filter: blur(100px);
+        transform: translate(+100%, +50%);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        transform: translate(0);
+    }
+    
+}
+
+@keyframes btnElement {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        filter: blur(100px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
