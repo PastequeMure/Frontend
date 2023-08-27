@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch the JSON data
-    fetch('/ressources/data/data.json')
+    fetch('./ressources/data/data.json')
         .then(response => response.json())
         .then(categories => {
             // Display categories in HTML
