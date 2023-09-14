@@ -24,15 +24,18 @@ body .card {
   width: 80%;
   padding: 25px;
 }
-body .card .star img {
+body .card .ratingContainer {
+  display: none;
+}
+body .card .ratingContainer .star img {
   background-color: hsl(213, 19%, 18%);
   border-radius: 50%;
   padding: 15px;
 }
-body .card p {
+body .card .ratingContainer p {
   color: hsl(216, 12%, 54%);
 }
-body .card .rating {
+body .card .ratingContainer .rating {
   list-style-type: none;
   color: hsl(216, 12%, 54%);
   display: grid;
@@ -42,7 +45,7 @@ body .card .rating {
   justify-items: stretch;
   width: 100%;
 }
-body .card .rating li {
+body .card .ratingContainer .rating li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,16 +55,16 @@ body .card .rating li {
   border-radius: 100%;
   font-weight: 400;
 }
-body .card .rating li:hover {
+body .card .ratingContainer .rating li:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-body .card .rating li:not(:hover) {
+body .card .ratingContainer .rating li:not(:hover) {
   transition: all 0.3s ease-in-out;
 }
-body .card .submit {
+body .card .ratingContainer .submit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,14 +76,39 @@ body .card .submit {
   font-weight: 700;
   margin-top: 20px;
 }
-body .card .submit:hover {
+body .card .ratingContainer .submit:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-body .card .submit:not(:hover) {
+body .card .ratingContainer .submit:not(:hover) {
   transition: all 0.3s ease-in-out;
+}
+body .card .thankContainer {
+  text-align: center;
+}
+body .card .thankContainer .thank {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+body .card .thankContainer .ratingData {
+  display: flex;
+  color: hsl(25, 97%, 53%);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 15%;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50px;
+  width: 65%;
+}
+body .card .thankContainer p {
+  color: hsl(216, 12%, 54%);
 }
 
 @media only screen and (min-width: 720px) {
