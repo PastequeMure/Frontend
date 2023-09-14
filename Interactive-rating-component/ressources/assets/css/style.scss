@@ -13,8 +13,6 @@ $font_size_large: 700;
     src: url(../fonts/overpass/Overpass-VariableFont_wght.ttf);
 }
 
-
-@media only screen and (min-width:375px) {
     body {
         background-color: darkgray;
         color: $primary;
@@ -75,6 +73,7 @@ $font_size_large: 700;
                 li:hover {
                     background-color: $neutral_1;
                     color: $primary;
+                    cursor: pointer;
                     transition: all 0.3s ease-in-out;
                 }
 
@@ -99,6 +98,7 @@ $font_size_large: 700;
             .submit:hover{
                 background-color: $neutral_1;
                 color: $primary;
+                cursor: pointer;
                 transition: all 0.3s ease-in-out;
             }
 
@@ -107,7 +107,11 @@ $font_size_large: 700;
             }
         }
     }
-}
 
 @media only screen and (min-width: 720px) {
+    body {
+        .card {
+            width: 21%;
+        }
+    }
 }
