@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "outfit";
+  src: url(../fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+body {
+  font-family: "outfit";
+  background-color: hsl(212, 45%, 89%);
+}
+body p {
+  font-size: 15px;
+}
+body .container {
+  position: relative;
+  width: 320px;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translate(-50%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  animation: containerAppear 2s forwards, borderRadius 5s forwards;
+  animation-delay: 1.5s;
+}
+body .container .top img {
+  max-width: 100%;
+  width: auto;
+  border-radius: 15px;
+  animation: QrAppear 2.5s forwards, borderQrRadius 5s forwards;
+  animation-delay: 1.5s;
+}
+body .container .bot {
+  padding: 10px;
+  text-align: center;
+}
+body .container .bot h2 {
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  opacity: 0;
+  transform: scale(0);
+  animation: h2Appear 0.5s forwards;
+  animation-delay: 4s;
+}
+body .container .bot p {
+  margin-left: 30px;
+  margin-right: 30px;
+  opacity: 0;
+  left: -100%;
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  animation: pAppear 0.5s forwards;
+  animation-delay: 4.5s;
+}
+
+@keyframes containerAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+    transform: scale(1), translate(-50%);
+  }
+}
+@keyframes borderRadius {
+  0% {
+    border-radius: 0;
+    box-shadow: 0;
+  }
+  100% {
+    border-radius: 15px;
+    box-shadow: 11px 11px 15px rgba(49, 45, 45, 0.84);
+  }
+}
+@keyframes QrAppear {
+  0% {
+    opacity: 0;
+    filter: blur(15px), grayscale(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0), grayscale(100%);
+  }
+}
+@keyframes borderQrRadius {
+  0% {
+    border-radius: 0;
+    filter: grayscale(100%);
+  }
+  100% {
+    border-radius: 15px;
+    filter: grayscale(0%);
+  }
+}
+@keyframes h2Appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pAppear {
+  0% {
+    opacity: 0;
+    left: -100%;
+    transform: translate(-100%);
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    transform: translate(0);
+  }
+}/*# sourceMappingURL=style.css.map */
