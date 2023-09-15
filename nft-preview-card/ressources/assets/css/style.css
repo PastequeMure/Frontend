@@ -164,13 +164,93 @@ body .container img {
   animation: imgAppear 0.5s forwards;
   animation-delay: 3s;
 }
+body .container .top-img {
+  width: auto;
+  height: auto;
+  max-width: 327px;
+  max-height: 327px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .top-img img {
+  position: relative;
+  top: 15px;
+  padding: 0;
+}
+body .container .top-img .eye {
+  display: none;
+  top: 45%;
+  position: absolute;
+}
+body .container .top-img:hover {
+  cursor: pointer;
+}
+body .container .top-img:hover .eye {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: imgAppear 0.3s forwards;
+  animation-delay: 0;
+}
+body .container .top-img:not(:hover) .eye {
+  transition: all 0.3s ease;
+}
+body .container .top-img::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+  border-radius: 35px;
+  width: 277px;
+  height: 277px;
+  z-index: 9999;
+  background-color: hsla(178, 100%, 50%, 0.363);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body .container .top-img:hover::before {
+  opacity: 1;
+}
 body .container h2 {
   margin-left: 25px;
+  margin-top: 30px;
   color: hsl(0, 0%, 100%);
   font-weight: 600;
   opacity: 0;
   animation: imgAppear 0.5s forwards;
   animation-delay: 3s;
+}
+body .container h2 span {
+  position: relative;
+  display: inline-block;
+}
+body .container h2 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: linear-gradient(to right, hsl(216, 50%, 16%) 0%, hsl(178, 100%, 50%) 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .container h2:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+}
+body .container h2:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 body .container p {
   font-size: 15px;

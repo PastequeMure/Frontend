@@ -190,7 +190,7 @@ body {
         animation: containerAppear 1.5s forwards;
         animation-delay: 2.5s;
 
-        img {
+        img{
             padding: 25px;
             width: auto;
             max-width: 277px;
@@ -201,13 +201,104 @@ body {
             animation-delay: 3s;
         }
 
+        .top-img{
+            width: auto;
+            height: auto;
+            max-width: 327px;
+            max-height: 327px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                position: relative;
+                top: 15px;
+                padding: 0;
+            }
+            .eye{
+                display: none;
+                top: 45%;
+                position: absolute;
+            }
+        }
+          
+        .top-img:hover{
+            cursor: pointer;
+            .eye{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: imgAppear 0.3s forwards;
+                animation-delay: 0;
+            }
+        }
+        .top-img:not(:hover) {
+            .eye{
+                transition: all 0.3s ease;
+            }
+        }
+
+        .top-img::before {
+            content: "";
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 15px;
+            border-radius: 35px;
+            width: 277px;
+            height: 277px;
+            z-index: 9999;
+            background-color: hsla(178, 100%, 50%, 0.363);
+            pointer-events: none;
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+        }
+          
+        .top-img:hover::before {
+          opacity: 1; 
+        }
+
+
         h2 {
             margin-left: 25px;
+            margin-top: 30px;
             color: $neutral;
             font-weight: $weight_large;
             opacity: 0;
             animation: imgAppear 0.5s forwards;
             animation-delay: 3s;
+
+            span {
+                position: relative;
+                display: inline-block;
+            }
+
+            span::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0px; 
+                width: 100%;
+                height: 1px;
+                border-radius: 50px;
+                background: linear-gradient(to right, $cardBg 0%, $primary2 100%);
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        h2:hover{
+            cursor: pointer;
+            color: $primary2;
+            transition: all 0.3s ease-in-out;
+            span::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            transition: all 0.3s ease;
         }
 
         p {
