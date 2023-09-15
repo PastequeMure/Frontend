@@ -1,0 +1,389 @@
+@font-face {
+  font-family: "outfit";
+  src: url(../fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+body {
+  font-family: "outfit";
+  margin: 0;
+  background-color: hsl(216, 50%, 16%);
+}
+body p {
+  font-size: 18px;
+}
+body .navbar {
+  background-color: hsl(217, 54%, 11%);
+  width: auto;
+  max-width: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow-x: hidden;
+  animation: navbarAppear 3s forwards;
+}
+body .navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body .navbar a img {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+body .navbar a img:hover {
+  cursor: pointer;
+  transform: rotate(-90deg);
+  filter: blur(0.1px);
+  transition: all 0.5s;
+}
+body .navbar a img:not(:hover) {
+  transform: rotate(0);
+  filter: blur(0);
+  transition: all 0.5s;
+}
+body .navbar a:hover {
+  cursor: default;
+}
+body .navbar ul {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: row;
+  gap: 10px;
+  list-style-type: none;
+  text-align: center;
+  margin-left: -30px;
+}
+body .navbar ul li a {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+body .navbar ul li a span {
+  opacity: 0;
+  position: relative;
+  display: inline-block;
+}
+body .navbar ul li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: linear-gradient(to right, hsl(216, 50%, 16%) 0%, hsl(0, 0%, 100%) 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .navbar ul li a:hover {
+  cursor: pointer;
+}
+body .navbar ul li a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body .navbar ul li:nth-child(1) a span {
+  animation: fadeInFromTop 0.5s forwards;
+  animation-delay: 1.5s;
+}
+body .navbar ul li:nth-child(2) a span {
+  animation: fadeInFromTop 0.5s forwards;
+  animation-delay: 2s;
+}
+body .navbar ul li:nth-child(3) a span {
+  animation: fadeInFromTop 0.5s forwards;
+  animation-delay: 2.5s;
+}
+body .challenge {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+  transition: all 0.5s linear;
+  animation: footerAppear 3s forwards;
+}
+body .challenge p {
+  flex-wrap: wrap;
+  font-size: x-small;
+  text-align: center;
+}
+body .challenge p a {
+  color: hsl(178, 100%, 50%);
+  text-decoration: none;
+}
+body .challenge p a:hover {
+  color: hsl(215, 51%, 70%);
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:hover {
+  color: hsl(215, 32%, 27%);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .container {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  display: block;
+  position: relative;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%);
+  justify-content: center;
+  width: 327px;
+  border-radius: 15px;
+  background-color: hsl(216, 50%, 16%);
+  animation: containerAppear 1.5s forwards;
+  animation-delay: 2.5s;
+}
+body .container img {
+  padding: 25px;
+  width: auto;
+  max-width: 277px;
+  display: flex;
+  border-radius: 35px;
+  opacity: 0;
+  animation: imgAppear 0.5s forwards;
+  animation-delay: 3s;
+}
+body .container h2 {
+  margin-left: 25px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  opacity: 0;
+  animation: imgAppear 0.5s forwards;
+  animation-delay: 3s;
+}
+body .container p {
+  font-size: 15px;
+  color: hsl(215, 51%, 70%);
+  margin-left: 25px;
+  margin-right: 25px;
+  opacity: 0;
+  font-weight: 300;
+  animation: imgAppear 0.5s forwards;
+  animation-delay: 3s;
+}
+body .container .data {
+  opacity: 0;
+  display: grid;
+  grid-auto-flow: column;
+  font-weight: 300;
+  margin-right: 25px;
+  animation: imgAppear 0.5s forwards;
+  animation-delay: 3s;
+}
+body .container .data .price {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+body .container .data .price span {
+  font-size: 15px;
+  margin-left: -20px;
+  color: hsl(178, 100%, 50%);
+}
+body .container .data .timer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+body .container .data .timer span {
+  font-size: 15px;
+  margin-left: -20px;
+  color: hsl(215, 51%, 70%);
+}
+body .container .divider {
+  margin-right: 25px;
+  margin-left: 25px;
+  height: 2px;
+  background-color: hsl(215, 32%, 27%);
+}
+body .container .author {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: imgAppear 0.5s forwards;
+  animation-delay: 3s;
+}
+body .container .author img {
+  margin-left: 25px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+body .container .author img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 6px hsl(0, 0%, 100%);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+body .container .author img:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .container .author p {
+  font-weight: 400;
+}
+body .container .author p a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+body .container .author p a span {
+  position: relative;
+  display: inline-block;
+}
+body .container .author p a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: linear-gradient(to right, hsl(216, 50%, 16%) 0%, hsl(178, 100%, 50%) 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .container .author p a:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+  transition: all 0.3s ease;
+}
+body .container .author p a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body .container .author p a:not(:hover) {
+  transition: all 0.3s ease;
+}
+
+@media only screen and (min-width: 720px) {
+  body .navbar {
+    flex-direction: unset;
+    overflow: auto;
+  }
+  body .navbar a {
+    width: 10%;
+  }
+  body .navbar a img {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+  }
+  body .navbar ul {
+    width: 90%;
+    display: flex;
+  }
+  body .navbar ul li {
+    display: flex;
+    flex-grow: 1;
+  }
+  body .navbar ul li a {
+    width: 100%;
+  }
+  body .navbar .divider {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    width: 2px;
+    height: 70px;
+    background-color: hsl(215, 32%, 27%);
+  }
+}
+@keyframes navbarAppear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  50% {
+    opacity: 1;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0px -9px 20px 0px hsl(215, 51%, 70%);
+  }
+}
+@keyframes footerAppear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  50% {
+    opacity: 1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0px 9px 20px 0px hsl(215, 51%, 70%);
+  }
+}
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    border-radius: 50px;
+    left: -100%;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    border-radius: 50px;
+    left: 0;
+  }
+}
+@keyframes containerAppear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0px 0px 20px 20px hsl(217, 54%, 11%);
+  }
+}
+@keyframes imgAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
