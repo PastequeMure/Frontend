@@ -21,7 +21,7 @@ body .navbar {
   align-items: center;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  overflow-x: hidden;
+  overflow: hidden;
   animation: navbarAppear 3s forwards;
 }
 body .navbar a {
@@ -360,7 +360,6 @@ body .container .author p a:not(:hover) {
 @media only screen and (min-width: 720px) {
   body .navbar {
     flex-direction: unset;
-    overflow: auto;
   }
   body .navbar a {
     width: 10%;

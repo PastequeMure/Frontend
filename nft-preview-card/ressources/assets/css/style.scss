@@ -35,7 +35,7 @@ body {
         align-items: center;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        overflow-x: hidden;
+        overflow: hidden;
         animation: navbarAppear 3s forwards;
 
 
@@ -427,7 +427,6 @@ body {
     body{
         .navbar {
             flex-direction: unset;
-            overflow: auto;
             a{
                 width: 10%;
                 img{
