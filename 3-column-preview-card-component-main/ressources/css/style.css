@@ -1,0 +1,447 @@
+@font-face {
+  font-family: "lexend";
+  src: url(../assets/fonts/lexend_deca/LexendDeca-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "big_shoulder";
+  src: url(../assets/fonts/big_shoulder/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  font-size: 15px;
+}
+body .navbar {
+  font-family: "lexend";
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, hsl(31, 77%, 52%), hsl(184, 100%, 22%), hsl(179, 100%, 13%));
+  top: 0;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform-origin: top;
+  animation: columAppear 1s forwards;
+  animation-delay: 3.2s;
+}
+body .navbar a {
+  display: block;
+  margin-left: 10px;
+}
+body .navbar a img {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+body .navbar a img:hover {
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+body .navbar a img:not(:hover) {
+  transition: all 0.3s;
+}
+body .navbar ul {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  gap: 10px;
+  list-style-type: none;
+  margin-left: -30px;
+  margin-right: 30px;
+}
+body .navbar ul li {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+body .navbar ul li a {
+  cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.75);
+  text-decoration: none;
+}
+body .navbar ul li a span {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+body .navbar ul li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: hsl(0, 0%, 95%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .navbar ul li a:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 95%);
+  transition: all 0.3s ease-in-out;
+}
+body .navbar ul li a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body .navbar ul li a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to left, hsl(31, 77%, 52%), hsl(184, 100%, 22%), hsl(179, 100%, 13%));
+  color: hsla(0, 0%, 100%, 0.75);
+  opacity: 0;
+  transform-origin: bottom;
+  animation: columAppear 1s forwards;
+  animation-delay: 3.2s;
+}
+body .challenge p {
+  flex-wrap: wrap;
+  font-size: x-small;
+  text-align: center;
+}
+body .challenge p a {
+  color: hsla(0, 0%, 100%, 0.75);
+  text-decoration: none;
+}
+body .challenge p a:hover {
+  color: hsl(0, 0%, 95%);
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .container {
+  position: relative;
+  top: 7%;
+  left: 50%;
+  display: grid;
+  width: 206px;
+  grid-auto-flow: row;
+  transform: translate(-50%, 7%);
+  font-weight: 700;
+  font-family: "big_shoulder";
+}
+body .container .left {
+  padding: 20px;
+  background-color: hsl(31, 77%, 52%);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  opacity: 0;
+  transform-origin: top;
+  animation: columAppear 1s forwards;
+}
+body .container .left .top img {
+  opacity: 0;
+  left: -100%;
+  animation: svgAppear 1s forwards;
+  animation-delay: 0.3s;
+}
+body .container .left .head {
+  opacity: 0;
+  color: hsl(0, 0%, 95%);
+  animation: headAppear 1s forwards;
+  animation-delay: 0.6s;
+}
+body .container .left .data {
+  opacity: 0;
+  padding-right: 10px;
+  font-weight: 400;
+  font-family: "lexend";
+  color: hsla(0, 0%, 100%, 0.75);
+  animation: dataAppear 1s forwards;
+  animation-delay: 1.6s;
+}
+body .container .left .btn {
+  font-family: "lexend";
+  font-weight: 400;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  color: hsl(31, 77%, 52%);
+  background-color: hsl(0, 0%, 95%);
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: btnAppear 1s forwards;
+  animation-delay: 3.2s;
+}
+body .container .left .btn:hover {
+  border: 1px solid white;
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(31, 77%, 52%);
+  transition: all 0.5s ease-in-out;
+}
+body .container .left .btn:not(:hover) {
+  transition: all 0.5s ease-in-out;
+}
+body .container .middle {
+  padding: 20px;
+  background-color: hsl(184, 100%, 22%);
+  opacity: 0;
+  animation: columAppear 1s forwards;
+  transform-origin: top;
+  animation-delay: 0.5s;
+}
+body .container .middle .top img {
+  opacity: 0;
+  left: -100%;
+  animation: svgAppear 1s forwards;
+  animation-delay: 0.6s;
+}
+body .container .middle .head {
+  opacity: 0;
+  color: hsl(0, 0%, 95%);
+  animation: headAppear 1s forwards;
+  animation-delay: 0.9s;
+}
+body .container .middle .data {
+  padding-right: 10px;
+  font-weight: 400;
+  font-family: "lexend";
+  color: hsla(0, 0%, 100%, 0.75);
+  opacity: 0;
+  animation: dataAppear 1s forwards;
+  animation-delay: 1.9s;
+}
+body .container .middle .btn {
+  font-family: "lexend";
+  font-weight: 400;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  color: hsl(184, 100%, 22%);
+  background-color: hsl(0, 0%, 95%);
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: btnAppear 1s forwards;
+  animation-delay: 2.9s;
+}
+body .container .middle .btn:hover {
+  border: 1px solid white;
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(184, 100%, 22%);
+  transition: all 0.5s ease-in-out;
+}
+body .container .middle .btn:not(:hover) {
+  transition: all 0.5s ease-in-out;
+}
+body .container .right {
+  padding: 20px;
+  background-color: hsl(179, 100%, 13%);
+  margin-bottom: 70px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  transform-origin: top;
+  animation: columAppear 1s forwards;
+  animation-delay: 1s;
+}
+body .container .right .top img {
+  opacity: 0;
+  left: -100%;
+  animation: svgAppear 1s forwards;
+  animation-delay: 0.9s;
+}
+body .container .right .head {
+  transform-origin: left;
+  opacity: 0;
+  color: hsl(0, 0%, 95%);
+  animation: headAppear 1s forwards;
+  animation-delay: 1.2s;
+}
+body .container .right .data {
+  padding-right: 10px;
+  font-weight: 400;
+  font-family: "lexend";
+  color: hsla(0, 0%, 100%, 0.75);
+  opacity: 0;
+  animation: dataAppear 1s forwards;
+  animation-delay: 2.2s;
+}
+body .container .right .btn {
+  font-family: "lexend";
+  font-weight: 400;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  color: hsl(179, 100%, 13%);
+  background-color: hsl(0, 0%, 95%);
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  transform-origin: right;
+  opacity: 0;
+  animation: btnAppear 1s forwards;
+  animation-delay: 2.5s;
+}
+body .container .right .btn:hover {
+  border: 1px solid white;
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(179, 100%, 13%);
+  transition: all 0.5s ease-in-out;
+}
+body .container .right .btn:not(:hover) {
+  transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 720px) {
+  body .container {
+    width: 915px;
+    height: 496px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, 30%);
+    grid-auto-flow: column;
+    border-radius: 10px;
+  }
+  body .container .left {
+    border-radius: 0;
+    width: 305px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  body .container .left .top {
+    padding: 30px;
+  }
+  body .container .left .head {
+    padding: 30px;
+  }
+  body .container .left .data {
+    padding: 30px;
+  }
+  body .container .left .btn {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 15px;
+    width: 40%;
+    margin-bottom: 45px;
+  }
+  body .container .middle {
+    width: 305px;
+  }
+  body .container .middle .top {
+    padding: 30px;
+  }
+  body .container .middle .head {
+    padding: 30px;
+  }
+  body .container .middle .data {
+    padding: 30px;
+  }
+  body .container .middle .btn {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 15px;
+    margin-top: 10px;
+    width: 40%;
+    margin-bottom: 45px;
+  }
+  body .container .right {
+    width: 305px;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 0;
+  }
+  body .container .right .top {
+    padding: 30px;
+  }
+  body .container .right .head {
+    padding: 30px;
+  }
+  body .container .right .data {
+    padding: 30px;
+  }
+  body .container .right .btn {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 15px;
+    width: 40%;
+    margin-bottom: 45px;
+  }
+}
+@keyframes columAppear {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(100%);
+  }
+}
+@keyframes svgAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes headAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate();
+  }
+}
+@keyframes dataAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes btnAppear {
+  0% {
+    opacity: 0;
+    transform: translate(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}/*# sourceMappingURL=style.css.map */
