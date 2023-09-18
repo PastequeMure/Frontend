@@ -190,6 +190,7 @@ body .container .left .btn {
   animation-delay: 3.2s;
 }
 body .container .left .btn:hover {
+  cursor: pointer;
   border: 1px solid white;
   color: hsl(0, 0%, 95%);
   background-color: hsl(31, 77%, 52%);
@@ -244,6 +245,7 @@ body .container .middle .btn {
   animation-delay: 2.9s;
 }
 body .container .middle .btn:hover {
+  cursor: pointer;
   border: 1px solid white;
   color: hsl(0, 0%, 95%);
   background-color: hsl(184, 100%, 22%);
@@ -303,6 +305,7 @@ body .container .right .btn {
   animation-delay: 2.5s;
 }
 body .container .right .btn:hover {
+  cursor: pointer;
   border: 1px solid white;
   color: hsl(0, 0%, 95%);
   background-color: hsl(179, 100%, 13%);

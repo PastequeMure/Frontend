@@ -224,6 +224,7 @@ body {
                 animation-delay: 3.2s;
             }
             .btn:hover{
+                cursor: pointer;
                 border: 1px solid white;
                 color: $bg_hd_btn;
                 background-color: $primary1;
@@ -286,6 +287,7 @@ body {
             }
 
             .btn:hover{
+                cursor: pointer;
                 border: 1px solid white;
                 color: $bg_hd_btn;
                 background-color: $primary2;
@@ -352,6 +354,7 @@ body {
             }
 
             .btn:hover{
+                cursor: pointer;
                 border: 1px solid white;
                 color: $bg_hd_btn;
                 background-color: $primary3;
