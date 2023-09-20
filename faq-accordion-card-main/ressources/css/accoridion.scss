@@ -1,0 +1,76 @@
+$text1: hsl(238, 29%, 16%);
+$text2: hsl(14, 88%, 65%);
+$text3: hsl(237, 12%, 33%);
+$text4: hsl(240, 6%, 50%);
+
+$bg_grad1: hsl(273, 75%, 66%);
+$bg_grad2: hsl(240, 73%, 65%);
+
+$divider: hsl(240, 5%, 91%);
+
+$weight_small: 400;
+$weight_large: 700;
+
+.accoridion {
+    margin: 0;
+    padding: 30px;
+    list-style-type: none;
+    
+    li {
+        width: 100%;
+        border-bottom: 1px solid $divider;
+    
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .answer {
+            display: none;
+            width: 100%;
+            margin-bottom: 25px;
+            color: $text4;
+        }
+    
+        input[type=checkbox] {
+            display: none;
+            width: 100%;
+        }
+    
+        input[type=checkbox]:checked ~ .answer {
+            display: block;
+            width: 100%;
+            transition: all 1s ease;
+        }
+
+        
+
+        input[type=checkbox]:checked ~ label {
+            font-weight: bolder;
+            transition: all 0.3s ease;
+
+            img {
+                transform: rotate(180deg);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        input[type=checkbox]:not(:checked) ~ label {
+            transition: all 0.3s ease;
+
+            img {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    
+    li:hover {
+        cursor: pointer;
+        p {
+            color: $text2;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

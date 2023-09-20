@@ -1,0 +1,51 @@
+.accoridion {
+  margin: 0;
+  padding: 30px;
+  list-style-type: none;
+}
+.accoridion li {
+  width: 100%;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accoridion li label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accoridion li .answer {
+  display: none;
+  width: 100%;
+  margin-bottom: 25px;
+  color: hsl(240, 6%, 50%);
+}
+.accoridion li input[type=checkbox] {
+  display: none;
+  width: 100%;
+}
+.accoridion li input[type=checkbox]:checked ~ .answer {
+  display: block;
+  width: 100%;
+  transition: all 1s ease;
+}
+.accoridion li input[type=checkbox]:checked ~ label {
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+.accoridion li input[type=checkbox]:checked ~ label img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.accoridion li input[type=checkbox]:not(:checked) ~ label {
+  transition: all 0.3s ease;
+}
+.accoridion li input[type=checkbox]:not(:checked) ~ label img {
+  transition: all 0.3s ease-in-out;
+}
+.accoridion li:hover {
+  cursor: pointer;
+}
+.accoridion li:hover p {
+  color: hsl(14, 88%, 65%);
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=accoridion.css.map */
