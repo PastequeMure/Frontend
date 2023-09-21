@@ -11,67 +11,59 @@ $divider: hsl(240, 5%, 91%);
 $weight_small: 400;
 $weight_large: 700;
 
-.accoridion {
-    display: block;
+.accoridion_js {
+    display: none;
     margin: 0;
     padding: 30px;
     list-style-type: none;
-    
+
     li {
         width: 100%;
         border-bottom: 1px solid $divider;
-    
-        label {
+
+        p{
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            img{
+                margin-left: 35px;
+            }
         }
-    
-        .answer {
+
+        span {
             display: none;
             width: 100%;
             margin-bottom: 25px;
             color: $text4;
         }
-    
-        input[type=checkbox] {
-            display: none;
-            width: 100%;
-        }
-    
-        input[type=checkbox]:checked ~ .answer {
-            display: block;
-            width: 100%;
-            transition: all 1s ease;
-        }
-
-        
-
-        input[type=checkbox]:checked ~ label {
-            font-weight: bolder;
-            transition: all 0.3s ease;
-
-            img {
-                transform: rotate(180deg);
-                transition: all 0.3s ease-in-out;
-            }
-        }
-
-        input[type=checkbox]:not(:checked) ~ label {
-            transition: all 0.3s ease;
-
-            img {
-                transition: all 0.3s ease-in-out;
-            }
-        }
     }
-    
+
     li:hover {
         cursor: pointer;
         p {
             color: $text2;
             transition: all 0.3s ease-in-out;
         }
+    }
+
+    .active {
+        p{
+            font-weight: bolder;
+            transition: all 0.3s ease;
+
+            img{
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+            }
+        }
+        span {
+            display: block;
+        }
+    }
+
+    :not(.active) {
+        transition: all 0.3s ease;
     }
 }

@@ -5,8 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./ressources/css/style.css">
         <link rel="stylesheet" href="./ressources/css/accoridion.css">
+        <link rel="stylesheet" href="./ressources/css/accoridion_js.css">
+        <script src="./ressources/js/setActive.js"></script>
         <title>FAQ accoridion</title>
         <link href="./ressources/assets/images/favicon-32x32.png" rel="icon" type="image/ico" />
+
+        <!-- 
+            To switch to js accoridion => 
+                Go to accoridion.css and set 
+                    .accoridion {
+                        display:none;
+                    }
+                Then to accoridion_js.css and set 
+                    .accoridion_js {
+                        display:block
+                    }
+        -->
+
     </head>
     <body>
         <header class="navbar">
@@ -26,8 +41,9 @@
                     <img src="./ressources/assets/images/bg-pattern-mobile.svg" alt="shadow_top_img_mobile" class="shadow">
                 </div>
                 <div class="desktop">
-                    <img src="./ressources/assets/images/illustration-woman-online-desktop.svg" alt="top_img_desk">
-                    <img src="./ressources/assets/images/bg-pattern-desktop.svg" alt="shadow_top_img_desk">
+                    <img src="./ressources/assets/images/illustration-woman-online-desktop.svg" alt="top_img_desk" class="top_img_desk">
+                    <img src="./ressources/assets/images/bg-pattern-desktop.svg" alt="shadow_top_img_desk" class="shadow">
+                    <img src="./ressources/assets/images/illustration-box-desktop.svg" alt="box" class="box">
                 </div>
             </div>
             <div class="data">
@@ -72,6 +88,44 @@
                             <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
                         </label>
                         <span class="answer" id="question5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</span>
+                    </li>
+                </ul>
+                <ul class="accoridion_js">
+                    <li>
+                        <p>
+                            How many team Members can I invite ?
+                            <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
+                        </p>
+                        <span>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</span>
+                    </li>
+                    <li>
+                        <p>
+                            What is the maximum file upload size?
+                            <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
+                        </p>
+                        <span>No more than 2GB. All files in your account must fit your allotted storage space.</span>
+                    </li>
+                    <li>
+                        <p>
+                            How do I reset my password?
+                            <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
+                        </p>
+                        <span>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</span>
+                    </li>
+                    <li>
+                        <p>
+                            Can I cancel my subscription?
+                            <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
+                        </p>
+                        </label>
+                        <span>Yes! Send us a message and we’ll process your request no questions asked.</span>
+                    </li>
+                    <li>
+                        <p>
+                            Do you provide additional support?
+                            <img src="./ressources/assets/images/icon-arrow-down.svg" alt="arrow">
+                        </p>
+                        <span>Chat and email support is available 24/7. Phone lines are open during normal business hours.</span>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,46 @@
+.accoridion_js {
+  display: none;
+  margin: 0;
+  padding: 30px;
+  list-style-type: none;
+}
+.accoridion_js li {
+  width: 100%;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accoridion_js li p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accoridion_js li p img {
+  margin-left: 35px;
+}
+.accoridion_js li span {
+  display: none;
+  width: 100%;
+  margin-bottom: 25px;
+  color: hsl(240, 6%, 50%);
+}
+.accoridion_js li:hover {
+  cursor: pointer;
+}
+.accoridion_js li:hover p {
+  color: hsl(14, 88%, 65%);
+  transition: all 0.3s ease-in-out;
+}
+.accoridion_js .active p {
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+.accoridion_js .active p img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+.accoridion_js .active span {
+  display: block;
+}
+.accoridion_js :not(.active) {
+  transition: all 0.3s ease;
+}/*# sourceMappingURL=accoridion_js.css.map */

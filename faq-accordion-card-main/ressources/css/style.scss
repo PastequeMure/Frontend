@@ -16,189 +16,247 @@ $weight_large: 700;
     src: url(../assets/fonts/kumbh/KumbhSans-VariableFont_YOPQ\,wght.ttf);
 }
 
-body {
-    margin: 0;
-    font-size: 12px;
-    font-family: 'kumbh';
-    min-height: 100vh;
+html {
     background: linear-gradient(to bottom, $bg_grad1, $bg_grad2);
+    min-height: 100vh;
 
-    .navbar {
-        display: flex;
-        align-items: center;
-        background: $text2;
-        top: 0;
-        position: absolute;
-        width: 100%;
-        overflow: hidden;
-        z-index: 5;
-        
-        a {
-            display: block;
-            margin-left: 10px;
-
-            img {
-                padding: 10px;
-                width: 40px;
-                height: 40px;
+    body {
+        margin: 0;
+        font-size: 12px;
+        font-family: 'kumbh';
+        margin-bottom: 50px;
+    
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: $text2;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            z-index: 5;
+            
+            a {
+                display: block;
+                margin-left: 10px;
+    
+                img {
+                    padding: 10px;
+                    width: 40px;
+                    height: 40px;
+                }
+    
+                img:hover {
+                    transform: rotate(-90deg);
+                    transition: all 0.3s;
+                }
+    
+                img:not(:hover) {
+                    transition: all 0.3s;
+                }
             }
-
-            img:hover {
-                transform: rotate(-90deg);
-                transition: all 0.3s;
-            }
-
-            img:not(:hover) {
-                transition: all 0.3s;
+    
+            ul{
+                display: grid;
+                width: 100%;
+                grid-auto-flow: column;
+                gap: 10px;
+                list-style-type: none;
+                margin-left: -30px; 
+                margin-right: 30px; 
+    
+                li {
+                    display: flex;
+                    flex-grow: 1;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        cursor: pointer;
+                        color: $divider;
+                        text-decoration: none;
+    
+                        span {
+                            text-align: center;
+                            position: relative;
+                            display: inline-block;
+                        }
+    
+                        span::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px; 
+                            width: 100%;
+                            height: 1px;
+                            border-radius: 50px;
+                            background: $bg_grad1;
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform 0.3s ease-in-out;
+                        }
+                    }
+    
+                    a:hover {
+                        cursor: pointer;
+                        color: $bg_grad1;
+                        transition: all 0.3s ease-in-out;
+                        span::after {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+    
+                    a:not(:hover) {
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
             }
         }
-
-        ul{
-            display: grid;
+    
+        .challenge {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            grid-auto-flow: column;
-            gap: 10px;
-            list-style-type: none;
-            margin-left: -30px; 
-            margin-right: 30px; 
-
-            li {
-                display: flex;
-                flex-grow: 1;
-                justify-content: center;
-                align-items: center;
-                a{
-                    cursor: pointer;
+            position: fixed;
+            bottom: 0;
+            background: $text2;
+            color: $text3;
+            z-index: 5;
+    
+            p {
+                flex-wrap: wrap;
+                font-size: x-small;
+                text-align: center;
+    
+                a {
                     color: $divider;
                     text-decoration: none;
-
-                    span {
-                        text-align: center;
-                        position: relative;
-                        display: inline-block;
-                    }
-
-                    span::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: -5px; 
-                        width: 100%;
-                        height: 1px;
-                        border-radius: 50px;
-                        background: $bg_grad1;
-                        transform: scaleX(0);
-                        transform-origin: right;
-                        transition: transform 0.3s ease-in-out;
-                    }
                 }
-
+    
                 a:hover {
-                    cursor: pointer;
                     color: $bg_grad1;
+                    margin-left: 5px;
+                    margin-right: 5px;
                     transition: all 0.3s ease-in-out;
-                    span::after {
-                        transform: scaleX(1);
-                        transform-origin: left;
-                    }
                 }
-
+    
                 a:not(:hover) {
                     transition: all 0.3s ease-in-out;
                 }
             }
-        }
-    }
-
-    .challenge {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        background: $text2;
-        color: $text3;
-        z-index: 5;
-
-        p {
-            flex-wrap: wrap;
-            font-size: x-small;
-            text-align: center;
-
-            a {
-                color: $divider;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: $bg_grad1;
-                margin-left: 5px;
-                margin-right: 5px;
+    
+            p:hover {
+                color: $text1;
+                transform: scale(1.1);
                 transition: all 0.3s ease-in-out;
             }
-
-            a:not(:hover) {
+    
+            p:not(:hover) {
                 transition: all 0.3s ease-in-out;
             }
         }
-
-        p:hover {
-            color: $text1;
-            transform: scale(1.1);
-            transition: all 0.3s ease-in-out;
-        }
-
-        p:not(:hover) {
-            transition: all 0.3s ease-in-out;
-        }
-    }
-
-    .card {
-        position: relative;
-        left: 50%;
-        margin-top: 50%;
-        transform: translate(-50%);
-        width: 327px;
-        background-color: white;
-        border-radius: 30px;
-        .top {
-            position: absolute;
-            width: auto;
-            .mobile {
-                margin-top: -111px;             
-                img{
-                    position: relative;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 75%;
-                    height: auto;
+    
+        .card {
+            position: relative;
+            left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%);
+            width: 327px;
+            background-color: white;
+            border-radius: 30px;
+            .top {
+                position: absolute;
+                width: auto;
+                .mobile {
+                    margin-top: -111px;             
+                    img{
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 75%;
+                        height: auto;
+                    }
+        
+                    .shadow{
+                        position: relative;
+                        margin-top: -80px;
+                    }
                 }
     
-                .shadow{
-                    position: relative;
-                    margin-top: -80px;
+                .desktop {
+                    display: none;
                 }
             }
-
-            .desktop {
-                display: none;
+    
+            .data {
+                padding-top: 100px;
+                padding-bottom: 20px;
+                justify-content: center;
+                font-weight: $weight_small;
+                h1 {
+                    text-align: center;
+                    font-size: 33px;
+                    font-weight: $weight_large;
+                    color: $text1;
+                }
+    
             }
-        }
-
-        .data {
-            padding-top: 100px;
-            padding-bottom: 20px;
-            justify-content: center;
-            font-weight: $weight_small;
-            h1 {
-                text-align: center;
-                font-size: 33px;
-                font-weight: $weight_large;
-                color: $text1;
-            }
-
         }
     }
+}
+
+@media only screen and (min-width:720px) {
+   html {
+    .card {
+        position: absolute !important;
+        margin: 0;
+        margin-top: 0 !important;
+        width: 920px !important;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%,-25%);
+        .top {
+            width: 50% !important;
+            height: 510px;
+            .mobile {
+                display: none;
+            }
+            .desktop {
+                display: block !important;
+                overflow: hidden;
+                max-height: 90vh;
+
+                .top_img_desk {
+                    position: relative;
+                    transform: translateY(25%);
+                    left: -15%;
+                    overflow: hidden;
+                }
+
+                .shadow {
+                    position: relative;
+                    transform: translate(-60%,-70%);
+                }
+
+                .box {
+                    position: absolute;
+                    top: 40%;
+                    left: -20%;
+                }
+            }
+        }
+
+        .data{
+            z-index: 999;
+            margin-left: 50%;
+
+            h1 {
+                text-align: left !important;
+                margin-left: 30px;
+            }
+        }
+    }
+   }
 }

@@ -1,4 +1,5 @@
 .accoridion {
+  display: block;
   margin: 0;
   padding: 30px;
   list-style-type: none;
