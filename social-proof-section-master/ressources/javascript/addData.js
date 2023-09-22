@@ -117,12 +117,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             })
 
-
-
             challengeDiv.appendChild(bigHead);
             challengeDiv.appendChild(ratingDiv);
             challengeDiv.appendChild(cardsDiv);
-
 
             body.appendChild(header);
             body.appendChild(challengeDiv);
