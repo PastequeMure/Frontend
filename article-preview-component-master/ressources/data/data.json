@@ -1,0 +1,43 @@
+{
+    "head" : "Shift the overall look and feel by adding these wonderful touches to furniture in your home",
+    "subhead" : "Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.",
+
+    "img" :
+        {
+            "imgUrl" : "./ressources/assets/images/drawers.jpg",
+            "imgAlt" : "drawers"
+        },
+
+    "author" :
+        {
+            "avatarUrl": "./ressources/assets/images/avatar-michelle.jpg",
+            "name" : "Michelle Appleton",
+            "date" : "28 Jun 2020"
+        },
+    
+    "icons":
+        [
+            {
+                "name" : "share",
+                "src" : "./ressources/assets/images/icon-share.svg",
+                "web" : "#"
+            },
+            {
+                "name" : "facebook",
+                "src" : "./ressources/assets/images/icon-facebook.svg",
+                "web" : "https://www.facebook.com/"
+            },
+            {
+                "name" : "pintereset",
+                "src" : "./ressources/assets/images/icon-pinterest.svg",
+                "web" : "https://www.pinterest.com/"
+            },
+            {
+                "name" : "twitter",
+                "src" : "./ressources/assets/images/icon-twitter.svg",
+                "web" : "https://twitter.com/"
+            }
+        ],
+
+    "tooltip_data" : "share"
+}
