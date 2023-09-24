@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const liBtn = document.createElement('li');
             liBtn.setAttribute('id', 'switch-btn');
             const switch_btn = document.createElement('button');
-            switch_btn.innerText = "With css";
+            switch_btn.innerText = "With js";
 
             liBtn.appendChild(switch_btn);
             Navul.appendChild(liBtn);
@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
             authorDiv.appendChild(avatarImg);
             authorDiv.appendChild(nameDiv);
             authorDiv.appendChild(shareLabel);
-            authorDiv.appendChild(inputCheck);
 
             const shareContainer_js = document.createElement("div")
             shareContainer_js.classList.add('shareContainer_js');
@@ -189,46 +188,43 @@ document.addEventListener('DOMContentLoaded', function() {
             shareContainer_css.classList.add('shareContainer_css');
             const shareText_css = document.createElement('p');
             shareText_css.innerText = data.tooltip_data.toUpperCase();
+            const shareParent_css = document.createElement('li');
+            const icons_css = data.icons;
             const iconsUl_css = document.createElement('ul');
-            const shareTextLi_css = document.createElement('li');
-            shareTextLi_css.appendChild(shareText_css);
-            iconsUl_css.appendChild(shareTextLi_css)
-            for(i=0; i< icons.length; i++) {
-                if(icons[i].name !== icons[0].name) {
-                    const icoLi_css = document.createElement('li');
-                    const icoA_css = document.createElement('a');
-                    const icoAsvg_css = document.createElement('img');
-                    icoA_css.href = icons[i].web;
-                    icoA_css.target = "_blank";
-                    icoAsvg_css.src = icons[i].src;
-                    icoAsvg_css.alt = icons[i].name
-                    
-                    icoA_css.appendChild(icoAsvg_css);
-                    icoLi_css.appendChild(icoA_css);
-                    iconsUl_css.appendChild(icoLi_css);
-                }
+            shareParent_css.appendChild(shareText_css);
+            iconsUl_css.appendChild(shareParent_css)
+            for(i=0; i<icons.length; i++) {
+              if(icons_css[i].name !== icons_css[0].name) {
+                const iconsLi_css = document.createElement('li');
+                const iconsA_css = document.createElement('a');
+                iconsA_css.href = icons_css[i].web;
+                iconsA_css.target = "_blank";
+                const iconsImg_css = document.createElement('img');
+                iconsImg_css.src = icons_css[i].src;
+                iconsImg_css.alt = icons_css[i].name;
+
+                iconsA_css.appendChild(iconsImg_css);
+                iconsLi_css.appendChild(iconsA_css);
+                iconsUl_css.appendChild(iconsLi_css);
+              }
             }
-            const shareLi_css = document.createElement('li');
-            shareLi_css.classList.add('share');
-            const shareLabel_css = document.createElement('label');
-            shareLabel_css.setAttribute('for','checkbox');
-            const inputCheck_css = document.createElement('input');
-            inputCheck_css.setAttribute('id','checkbox');
-            inputCheck_css.type = "checkbox";
-            const shareSvg_css = document.createElement('img');
-            shareSvg_css.src = data.icons[0].src;
-            shareSvg_css.alt = data.icons[0].name;
-            shareLabel_css.appendChild(shareSvg_css);
-            shareLi_css.appendChild(shareLabel_css);
-            shareLi_css.appendChild(inputCheck_css);
-            iconsUl_css.appendChild(shareLi_css);
-
-
+            const ShareLi_css = document.createElement('li');
+            ShareLi_css.classList.add('share')
+            const ShareLabel_css = document.createElement('label')
+            ShareLabel_css.setAttribute('for', "checkbox");
+            const ShareSvg_css = document.createElement('img');
+            ShareSvg_css.src = icons_css[0].src;
+            ShareSvg_css.alt = icons_css[0].name;
+            ShareLabel_css.appendChild(ShareSvg_css);
+            ShareLi_css.appendChild(ShareLabel_css);
+            iconsUl_css.appendChild(ShareLi_css);
             shareContainer_css.appendChild(iconsUl_css);
-            authorDiv.appendChild(shareContainer_css);
+
+            dataContainer.appendChild(inputCheck);
             dataContainer.appendChild(head);
             dataContainer.appendChild(subhead);
             dataContainer.appendChild(authorDiv);
+            dataContainer.appendChild(shareContainer_css);
             dataContainer.appendChild(shareContainer_js);
 
             mainDiv.appendChild(imgContainer);
@@ -242,22 +238,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // ------ ON CLICK ------ //
             const labelOn = document.getElementById('labelOn')
-            labelOn.addEventListener('click', () => {
-                if(!labelOn.classList.contains('no')) {
-                  shareContainer_js.classList.add('show');
-                  shareContainer_js.style = "display:block";
-                  authorDiv.style = "display:none";
-                }
-            })
-
             const shareAfter = document.getElementById('shareAfter');
-            shareAfter.addEventListener('click', () => {
-              if(shareContainer_js.classList.contains('show')) {
-                shareContainer_js.classList.remove('show');
-                shareContainer_js.style = "display:none";
-                authorDiv.style="display:grid"
-              }
-            })
+
+            if(window.innerWidth < 720) {
+              labelOn.addEventListener('click', () => {
+                  if(!labelOn.classList.contains('no')) {
+                    shareContainer_js.classList.add('show');
+                    shareContainer_js.style = "display:block";
+                    authorDiv.style = "display:none";
+                  }
+              })
+
+              shareAfter.addEventListener('click', () => {
+                if(shareContainer_js.classList.contains('show')) {
+                  shareContainer_js.classList.remove('show');
+                  shareContainer_js.style = "display:none";
+                  authorDiv.style="display:grid"
+                }
+              })
+            } else {
+              labelOn.addEventListener('click', () => {
+                const labelImg = document.getElementById('on');
+                if(shareContainer_js.classList.contains('show')) {
+                  shareContainer_js.classList.remove('show');
+                  shareContainer_js.style = "display:none";
+                  labelImg.classList.remove('active');
+                } else {
+                    if(!labelOn.classList.contains('no')) {
+                      shareContainer_js.classList.add('show');
+                      shareContainer_js.style = "display:block";
+                      labelImg.classList.add('active')
+                    }
+                }
+              })
+            }
 
             const SwitchBtn = document.getElementById('switch-btn');
             SwitchBtn.addEventListener('click', () => {
