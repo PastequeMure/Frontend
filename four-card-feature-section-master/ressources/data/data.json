@@ -1,0 +1,55 @@
+{
+    "head" : 
+        {
+            "title" : "four-cards-features-section-master"
+        },
+    "main":
+        {
+            "head" : 
+                {
+                    "firstHead" : "Reliable, efficient delivery",
+                    "secondHead" : "Powered by Technology",
+                    "subHead" : "Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful"
+                },
+            "cards" :
+                {
+                    "firstCol" : 
+                        {
+                            "supervisor_card":
+                                {
+                                    "title" : "Supervisor",
+                                    "desc" : "Monitors activity to identify project roadblocks",
+                                    "src" : "./ressources/assets/images/icon-supervisor.svg",
+                                    "alt" : "icon-supervisor"
+                                }
+                        },
+                    "secondCol" :
+                        {
+                            "teambuilder_card":
+                                {
+                                    "title" : "Team Builder",
+                                    "desc" : "Scans our talent network to create the optimal team for your project",
+                                    "src" : "./ressources/assets/images/icon-team-builder.svg",
+                                    "alt" : "icon-team-builder"
+                                },
+                            "karma_card" :
+                                {
+                                    "title" : "Karma",
+                                    "desc" : "Regularly evaluates our talent to ensure quality",
+                                    "src" : "./ressources/assets/images/icon-karma.svg",
+                                    "alt" : "icon-karma"
+                                }
+                        },
+                    "thirdCol" :
+                        {
+                            "calculator_card" :
+                                {
+                                    "title" : "Calculator",
+                                    "desc" : "Uses data from past projects to provide better delivery estimates",
+                                    "src" : "./ressources/assets/images/icon-calculator.svg",
+                                    "alt" : "icon-calculator"
+                                }
+                        }
+                }
+        }
+}
