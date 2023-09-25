@@ -1,0 +1,73 @@
+{
+    "head":
+        {
+            "metacharset" : "UTF-8",
+            "meta" :
+                {
+                    "name" : "viewport",
+                    "content": "width=device-width, initial-scale=1.0"
+                },
+            "style" : 
+                {
+                    "rel" : "stylesheet",
+                    "href" : "./ressources/css/style.css"
+                },
+            "icon" :
+                {
+                    "href" : "./ressources/assets/images/favicon-32x32.png",
+                    "rel" : "icon",
+                    "type" : "image/ico"
+                }
+        },
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "a":
+                {
+                    "frontend" :
+                        {
+                            "url": "https://www.frontendmentor.io?ref=challenge",
+                            "target" : "_blank",
+                            "text" : "Frontend Mentor"
+                        },
+                    "dev" :
+                        {
+                            "url" : "https://github.com/PastequeMure",
+                            "target" : "_blank",
+                            "text" : "Pastèque Mûre"
+                        }
+                }
+        }
+}

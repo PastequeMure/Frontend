@@ -1,0 +1,37 @@
+{
+    "logo" :
+        {
+            "src" : "./ressources/assets/images/logo.svg",
+            "alt" : "logo"
+        },
+
+    "hero" :
+        {
+            "desk" :
+                {
+                    "src" : "./ressources/assets/images/hero-desktop.jpg",
+                    "alt" : "hero"
+                },
+            "mobile" :
+                {
+                    "src": "./ressources/assets/images/hero-mobile.jpg",
+                    "alt" : "hero"
+                }
+        },
+    "arrow":
+        {
+            "src" : "./ressources/assets/images/icon-arrow.svg",
+            "alt": "arrow"
+        },
+
+    "error":
+        {
+            "src": "./ressources/assets/images/icon-error.svg",
+            "alt": "error",
+            "text" : "Please provide a valid email"
+        },
+    "valid" : "Yeah ! It's a valid email !",
+    "head": "We're coming soon",
+    "text" : "Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.",
+    "placeholder" : "Email Adress"
+}

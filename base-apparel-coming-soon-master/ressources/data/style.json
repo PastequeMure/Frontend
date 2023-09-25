@@ -1,0 +1,32 @@
+{
+    "input" :
+        {
+            "true" : "border: 2px solid green; transition: all 0.3s ease",
+            "false" : "border: 2px solid hsl(0, 93%, 68%); transition: all 0.3s ease",
+            "default" :  "border: 2px solid hsl(0, 36%, 70%); transition: all 0.3s ease"
+        },
+    "error_ico": 
+        {
+            "true" : "opacity:0; transition: all 0.3s ease",
+            "false" : "opacity:1; transition: all 0.3s ease",
+            "default" : "opacity:1; transition: all 0.3s ease"
+        },
+    "error_msg":
+        {
+            "true" : "opacity:0; transition: all 0.3s ease",
+            "false" : "opacity:1; transition: all 0.3s ease",
+            "default" : "opacity:1; transition: all 0.3s ease"
+        },
+    "valid_msg":
+        {
+            "true" : "opacity:1; transition: all 0.3s ease",
+            "false" : "opacity:0; transition: all 0.3s ease",
+            "default" : "opacity:0; transition: all 0.3s ease"
+        },
+    "sbtBtn":
+        {
+            "true" : "padding: 11px; border-radius: 50px; width: 40px; text-align: center; background: linear-gradient(to right, lightgreen, green);box-shadow: lightgreen 0px 5px 20px 2px; transition: all 0.3s ease-in-out;",
+            "false" : "transform: scale(1.1); width: 70px; background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));box-shadow: 0px 5px 9px 0px hsl(0, 36%, 70%); transition: all 0.3s ease-in-out;",
+            "default" : "padding: 11px; border-radius: 50px; width: 40px; text-align: center; background: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));box-shadow: 0px 5px 9px 0px hsl(0, 36%, 70%); transition: all 0.3s ease-in-out;"
+        }
+}

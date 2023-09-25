@@ -1,0 +1,264 @@
+@font-face {
+  font-family: "josefinsans";
+  src: url(../assets/fonts/josefinsans/JosefinSans-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  background-image: url(../assets/images/bg-pattern-desktop.svg);
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  font-family: "josefinsans";
+}
+body .navbar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  top: 0;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+}
+body .navbar a {
+  display: block;
+  margin-left: 10px;
+}
+body .navbar a img {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+body .navbar a img:hover {
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+body .navbar a img:not(:hover) {
+  transition: all 0.3s;
+}
+body .navbar ul {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  gap: 10px;
+  list-style-type: none;
+  margin-left: -30px;
+  margin-right: 30px;
+}
+body .navbar ul li {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+body .navbar ul li a {
+  cursor: pointer;
+  color: hsl(0, 36%, 70%);
+  text-decoration: none;
+}
+body .navbar ul li a span {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+body .navbar ul li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: hsl(0, 93%, 68%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .navbar ul li a:hover {
+  cursor: pointer;
+  color: hsl(0, 93%, 68%);
+  transition: all 0.3s ease-in-out;
+}
+body .navbar ul li a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body .navbar ul li a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  color: hsl(0, 36%, 70%);
+}
+body .challenge p {
+  flex-wrap: wrap;
+  font-size: x-small;
+  text-align: center;
+}
+body .challenge p:hover {
+  color: hsl(0, 36%, 70%);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge a {
+  margin-left: 5px;
+  color: hsl(0, 36%, 70%);
+  margin-right: 5px;
+  text-decoration: none;
+}
+body .challenge a:hover {
+  color: hsl(0, 93%, 68%);
+  transform: scale(1.1);
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+body .challenge a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .main {
+  margin-top: 100px;
+}
+body .main .logo {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+body .main .hero .desk {
+  display: none;
+}
+body .main .head {
+  text-align: center;
+}
+body .main .head h1 {
+  letter-spacing: 10px;
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+}
+body .main .head .item-1 {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+body .main .head p {
+  margin-top: -30px;
+  padding: 20px;
+  color: hsl(0, 36%, 70%);
+}
+body .main form {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  flex-grow: 1;
+  padding: 20px;
+  margin-bottom: -10px;
+}
+body .main form input {
+  position: absolute;
+  padding: 15px;
+  border-radius: 50px;
+  width: 80%;
+  border: 2px solid hsl(0, 36%, 70%);
+}
+body .main form input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+body .main form input[type=text]:focus {
+  outline: none;
+}
+body .main form label {
+  position: relative;
+  left: 72.5vw;
+  padding: 11px;
+  border-radius: 50px;
+  width: 40px;
+  text-align: center;
+  background: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+}
+body .main form label:hover {
+  cursor: pointer;
+  left: 68vw;
+  width: 70px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 5px 9px 0px hsl(0, 36%, 70%);
+  transition: all 0.3s ease-in-out;
+}
+body .main form .error {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 65%;
+}
+body .main .errorMsg {
+  display: block;
+  opacity: 0;
+  margin-left: 40px;
+  color: hsl(0, 93%, 68%);
+}
+body .main .valid {
+  display: block;
+  opacity: 0;
+  margin-top: -15px;
+  margin-left: 40px;
+  color: rgb(69, 185, 69);
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    background-size: 100% auto;
+  }
+  body .main {
+    padding-left: 10vw;
+    padding-bottom: 10vh;
+  }
+  body .main .logo {
+    padding: 0;
+  }
+  body .main .hero .desk {
+    position: absolute;
+    margin-top: -77px;
+    right: 15px;
+    display: block !important;
+  }
+  body .main .hero .mob {
+    display: none;
+  }
+  body .main .head {
+    text-align: left;
+    width: 50%;
+  }
+  body .main .head h1 {
+    font-size: 68px;
+  }
+  body .main .head p {
+    width: 60%;
+  }
+  body .main form {
+    padding: 0;
+    width: 50%;
+  }
+  body .main form input {
+    margin-left: 20px;
+    width: 25%;
+  }
+  body .main form label {
+    left: 24.5vw;
+  }
+  body .main form label:hover {
+    left: 24.5vw;
+    transform: scale(1.1);
+  }
+  body .main form .error {
+    left: 31%;
+  }
+  body .main span {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
