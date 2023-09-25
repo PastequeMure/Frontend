@@ -83,12 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 headDiv.classList.add('head');
                 dataDiv.appendChild(headDiv);
 
-                const firstHead = document.createElement('h1');
+                const firstHead = document.createElement('h2');
                 firstHead.innerText = headData.firstHead;
+                firstHead.classList.add('firstHead');
                 headDiv.appendChild(firstHead);
 
-                const secondHead = document.createElement('h1');
+                const secondHead = document.createElement('h2');
                 secondHead.innerText = headData.secondHead;
+                secondHead.classList.add('secondHead');
                 headDiv.appendChild(secondHead);
 
                 const subHead = document.createElement('h6');
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const supData = data.main.cards.firstCol.supervisor_card;
                 const supDiv = document.createElement('div');
                 supDiv.classList.add('supervisor');
+                supDiv.classList.add('card');
                 firstColDiv.appendChild(supDiv);
 
                 const supTitle = document.createElement('h1');
@@ -128,15 +131,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 supDesc.innerText = supData.desc;
                 supDiv.appendChild(supDesc);
 
+                const supImgDiv = document.createElement('div');
+                supDiv.appendChild(supImgDiv);
+                
                 const supImg = document.createElement('img');
                 supImg.src = supData.src;
                 supImg.alt = supData.alt;
-                supDiv.appendChild(supImg);
+                supImgDiv.appendChild(supImg);
 
                 // ------ TEAM CARD ------ //
                 const teamData = data.main.cards.secondCol.teambuilder_card;
                 const teamDiv = document.createElement('div');
                 teamDiv.classList.add('team');
+                teamDiv.classList.add('card');
                 secondColDiv.appendChild(teamDiv);
 
                 const teamTitle = document.createElement('h1');
@@ -147,15 +154,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 teamDesc.innerText = teamData.desc;
                 teamDiv.appendChild(teamDesc);
 
+                const teamImgDiv = document.createElement('div');
+                teamDiv.appendChild(teamImgDiv);
+
                 const teamImg = document.createElement('img');
                 teamImg.src = teamData.src;
                 teamImg.alt = teamData.alt;
-                teamDiv.appendChild(teamImg);
+                teamImgDiv.appendChild(teamImg);
 
                 // ------ KARMA CARD ------ //
                 const karmaData = data.main.cards.secondCol.karma_card;
                 const karmaDiv = document.createElement('div')
                 karmaDiv.classList.add('karma');
+                karmaDiv.classList.add('card');
                 secondColDiv.appendChild(karmaDiv);
 
                 const karmaTitle = document.createElement('h1');
@@ -166,15 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 karmaDesc.innerText = karmaData.desc;
                 karmaDiv.appendChild(karmaDesc);
 
+                const karmaImgDiv = document.createElement('div');
+                karmaDiv.appendChild(karmaImgDiv);
+
                 const karmaImg = document.createElement('img');
                 karmaImg.src = karmaData.src;
                 karmaImg.alt = karmaData.alt;
-                karmaDiv.appendChild(karmaImg);
+                karmaImgDiv.appendChild(karmaImg);
 
                 // ------ CALCULATOR CARD ------ //
                 const calcData = data.main.cards.thirdCol.calculator_card;
                 const calculatorDiv = document.createElement('div');
                 calculatorDiv.classList.add('calculator');
+                calculatorDiv.classList.add('card');
                 thirdColDiv.appendChild(calculatorDiv);
 
                 const calcTitle = document.createElement('h1');
@@ -185,10 +200,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 calcDesc.innerText = calcData.desc;
                 calculatorDiv.appendChild(calcDesc);
 
+                const calcImgDiv = document.createElement('div');
+                calculatorDiv.appendChild(calcImgDiv);
+
                 const calcImg = document.createElement('img');
                 calcImg.src = calcData.src;
                 calcImg.alt = calcData.alt;
-                calculatorDiv.appendChild(calcImg);
+                calcImgDiv.appendChild(calcImg);
 
                 // ------ FINAL STEP ------ //  
 
