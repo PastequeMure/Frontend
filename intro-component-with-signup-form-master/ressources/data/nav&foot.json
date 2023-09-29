@@ -34,20 +34,18 @@
                     "Challenge by",
                     "Coded by"
                 ],
-            "a":
+            "frontend" :
                 {
-                    "frontend" :
-                        {
-                            "url": "https://www.frontendmentor.io?ref=challenge",
-                            "target" : "_blank",
-                            "text" : "Frontend Mentor"
-                        },
-                    "dev" :
-                        {
-                            "url" : "https://github.com/PastequeMure",
-                            "target" : "_blank",
-                            "text" : "Pastèque Mûre"
-                        }
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
                 }
+                
         }
 }

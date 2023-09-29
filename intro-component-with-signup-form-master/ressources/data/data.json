@@ -1,0 +1,32 @@
+{
+    "title" : "intro-component-with-signup-form-master",
+    "head" : "Learn to code by watching others",
+    "subhead" : "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. ",
+    "promotion" : "Try it free 7 days then $20/mo. thereafter",
+    "error_ico" : 
+        {
+            "src" : "./ressources/assets/images/icon-error.svg",
+            "alt" : "icon-error"
+        },
+    "inputs" :
+        [
+            {
+                "placeholder" : "First Name",
+                "type" : "text"
+            },
+            {
+                "placeholder" : "Last Name",
+                "type" : "text"
+            },
+            {
+                "placeholder" : "Email Address",
+                "type" : "email"
+            },
+            {
+                "placeholder": "Password",
+                "type" : "password"
+            }
+        ],
+    "btn" : "Claim your free trial",
+    "terms" : "By clicking the button, you are agreeing to our Terms and Services"
+}
