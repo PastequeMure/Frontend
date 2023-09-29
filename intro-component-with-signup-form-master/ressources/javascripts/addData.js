@@ -197,6 +197,7 @@ export function addData() {
                     if(!isValidValue) {
                         spanToshow.classList.add('active');
                         icoToShow.classList.add('active');
+                        getInputs[i].style.borderColor = 'hsl(0, 100%, 74%)';
                     } else {
                         spanToshow.classList.remove('active');
                         icoToShow.classList.remove('active');
@@ -205,6 +206,7 @@ export function addData() {
                     if(!checkMail) {
                         spanToshow.classList.add('active');
                         icoToShow.classList.add('active');
+                        getInputs[i].style.borderColor = 'hsl(0, 100%, 74%)';
                     } else {
                         spanToshow.classList.remove('active');
                         icoToShow.classList.remove('active')
