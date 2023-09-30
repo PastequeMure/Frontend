@@ -1,0 +1,27 @@
+{
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "/ressources/img/main.webp",
+                    "imgAlt" : "home"
+                },
+            "frontend" :
+            {
+                "url": "https://www.frontendmentor.io?ref=challenge",
+                "target" : "_blank",
+                "text" : "Frontend Mentor"
+            }
+        },
+    "footer": 
+        {
+            "p" : "Coded by",
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}
