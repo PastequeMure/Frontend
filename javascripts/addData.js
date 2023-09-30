@@ -6,7 +6,7 @@ export function addData() {
         
         for(let i = 0; i < data.length; i++) {
             const ChallengeA = document.createElement('a');
-            ChallengeA.href = `/${data[i]}`;
+            ChallengeA.href = `./${data[i]}`;
             ChallengeA.innerText = `#${i+1} ${data[i]}`;
             cardDiv.appendChild(ChallengeA)
         }
