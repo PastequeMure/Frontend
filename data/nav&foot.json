@@ -3,7 +3,7 @@
         {
             "img" :
                 {
-                    "imgUrl" : "./ressources/img/main.webp",
+                    "imgUrl" : "./main.webp",
                     "imgAlt" : "home"
                 },
             "frontend" :
