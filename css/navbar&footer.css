@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'bree';
-    src: url(/ressources/styles/font/bree/BreeSerif-Regular.ttf);
+    src: url(./bree/BreeSerif-Regular.ttf);
 }
 body {
     background-color: gray;
