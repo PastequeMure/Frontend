@@ -66,3 +66,22 @@
     color: white;
     font-size: 20px;
 }
+
+
+@media only screen and (max-width:1700px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .card a {
+        width: 350px !important;
+    }
+    .card a div img {
+        width: 350px;
+    }
+}
