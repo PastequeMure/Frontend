@@ -1,0 +1,51 @@
+{
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "frontend" :
+                {
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}

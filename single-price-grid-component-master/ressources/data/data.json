@@ -1,0 +1,24 @@
+{
+    "title" : "Frontend Mentor | Single Price Grid Component",
+    "mainDiv":
+        {
+            "head":
+                {
+                    "firstHead" : "Join our community",
+                    "subhead" : "30-day, hassle-free money back guarantee",
+                    "paragraph" : "Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills."
+                },
+            "subscription" :
+                {
+                    "head" : "Monthly Subscription",
+                    "price" : "$29 per month",
+                    "paragraph": "Full access for less than $1 a day",
+                    "btn" : "Sign Up"
+                },
+            "explain":
+                {
+                    "head" : "Why Us",
+                    "paragraph" : "Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos Community forum Flashcard decks New videos every week"
+                }
+        }
+}
