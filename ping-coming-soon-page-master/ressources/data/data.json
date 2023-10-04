@@ -1,0 +1,81 @@
+{
+    "title" : "Frontend Mentor | Ping coming soon page",
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "mainDiv":
+        {
+            "logo" : "./ressources/assets/images/logo.svg",
+            "head" : 
+                {
+                    "h1" : "We are launching soon!",
+                    "h2" : "Subscribe and get notified"
+                },
+            "form" :
+                {
+                    "input" : "Your email address",
+                    "btn" : 
+                        {
+                            "type" : "submit",
+                            "text" : "Notify Me"
+                        }
+                },
+            "illustration" : "./ressources/assets/images/illustration-dashboard.png",
+            "foot":
+                {
+                    "socials" :
+                        [
+                            "./ressources/assets/images/facebook.svg",
+                            "./ressources/assets/images/twitter.svg",
+                            "./ressources/assets/images/instagram.svg"
+                        ],
+                    "paragraph" : "@ Copyright Ping. All rights reserved."
+                }
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "frontend" :
+                {
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}
