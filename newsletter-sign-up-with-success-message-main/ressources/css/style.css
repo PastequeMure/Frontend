@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --navBg: hsl(4, 100%, 67%);
+  --navColor: hsl(0, 0%, 100%);
+  --navHover: hsl(231, 7%, 60%);
+  --footBg: hsl(4, 100%, 67%);
+  --footColor: hsl(231, 7%, 60%);
+  --footLink: hsl(0, 0%, 100%);
+  --footHover: hsl(235, 18%, 26%);
+  --primary: hsl(4, 100%, 67%);
+  --neutral-1: hsl(234, 29%, 20%);
+  --neutral-2: hsl(235, 18%, 26%);
+  --neutral-3: hsl(231, 7%, 60%);
+  --neutral-4: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--neutral-1);
+}
+body .navbar {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  background: var(--navBg);
+  top: 0;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+}
+body .navbar a {
+  display: block;
+  margin-left: 10px;
+}
+body .navbar a img {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+body .navbar a img:hover {
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+body .navbar a img:not(:hover) {
+  transition: all 0.3s;
+}
+body .navbar ul {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  gap: 10px;
+  list-style-type: none;
+  margin-left: -30px;
+  margin-right: 30px;
+}
+body .navbar ul li {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+body .navbar ul li a {
+  cursor: pointer;
+  color: var(--navColor);
+  text-decoration: none;
+}
+body .navbar ul li a span {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+body .navbar ul li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50px;
+  background: var(--navHover);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+body .navbar ul li a:hover {
+  cursor: pointer;
+  color: var(--navHover);
+  transition: all 0.3s ease-in-out;
+}
+body .navbar ul li a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body .navbar ul li a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: var(--footBg);
+  color: var(--footColor);
+}
+body .challenge p {
+  flex-wrap: wrap;
+  font-size: x-small;
+  text-align: center;
+}
+body .challenge p:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+body .challenge p:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .challenge a {
+  margin-left: 5px;
+  color: var(--footLink);
+  margin-right: 5px;
+  text-decoration: none;
+}
+body .challenge a:hover {
+  color: var(--footHover);
+  transition: all 0.3s ease-in-out;
+}
+body .challenge a:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -43%);
+}
+body .main .subscription-section .data {
+  padding: 20px;
+  padding-top: 0;
+}
+body .main .subscription-section .data h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+body .main .subscription-section .data .checklist {
+  list-style-type: none;
+  margin: 0;
+  margin-left: -10vw;
+}
+body .main .subscription-section .data .checklist li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.1fr 1fr;
+  font-weight: 700;
+}
+body .main .subscription-section .subscription {
+  margin-top: -40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  padding: 20px;
+  margin-bottom: 5vh;
+}
+body .main .subscription-section .subscription label {
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+body .main .subscription-section .subscription label span {
+  color: var(--primary);
+}
+body .main .subscription-section .subscription input {
+  height: 50px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid var(--neutral-3);
+  margin-bottom: 10px;
+}
+body .main .subscription-section .subscription input::placeholder {
+  padding-left: 5vw;
+  color: var(--neutral-3);
+}
+body .main .subscription-section .subscription input[type=text]:focus::placeholder {
+  padding-left: unset;
+  color: var(--neutral-2);
+  transition: color 0.3s ease;
+}
+body .main .subscription-section .subscription input[type=text]:focus {
+  border-color: 1px solid var(--neutral-2);
+  color: var(--neutral-2);
+  padding-left: 5vw;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+body .main .subscription-section .subscription input[type=text]:not(:focus) {
+  transition: all 0.3s ease;
+}
+body .main .subscription-section .subscription input[type=text]:not(:placeholder-shown) {
+  padding-left: 5vw;
+}
+body .main .subscription-section .subscription input[type=text]:not(:placeholder-shown):not(:focus) {
+  color: var(--neutral-3);
+  transition: all 0.3s ease;
+}
+body .main .subscription-section .subscription input:hover {
+  cursor: pointer;
+}
+body .main .subscription-section .subscription button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  font-weight: 700;
+  background-color: var(--neutral-1);
+  color: var(--neutral-4);
+}
+body .main .subscription-section .subscription button:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  box-shadow: 0px 6px 20px var(--primary);
+  filter: brightness(0.9);
+  transition: all 0.3s ease-in-out;
+}
+body .main .subscription-section .subscription button:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+body .main .success-section {
+  position: absolute;
+  top: -30vh;
+  left: -40vw;
+}
+body .main .success-section .success-icon {
+  width: fit-content;
+  background-color: var(--primary);
+  border-radius: 50px;
+}
+body .main .success-section .success-text {
+  width: 100%;
+}
+body .main .success-section .success-text h1 {
+  font-size: 2em;
+}
+body .main .success-section .success-text p {
+  width: 90vw;
+}
+body .main .success-section button {
+  position: fixed;
+  bottom: -44vh;
+  width: 80vw;
+  height: 50px;
+  color: var(--neutral-4);
+  background-color: var(--neutral-1);
+  border: none;
+  outline: none;
+  font-weight: 700;
+  border-radius: 10px;
+}
+body .main .success-section button:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  box-shadow: 0px 6px 20px var(--primary);
+  filter: brightness(0.9);
+  transition: all 0.3s ease-in-out;
+}
+body .main .success-section button:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
         const body = document.body;
+        const head = document.head;
+
+        const title = document.createElement('title')
+        title.innerText = data.title
+        head.appendChild(title)
 
         // ------ NAVBAR ------ //
         const NAVBAR = document.createElement('header');

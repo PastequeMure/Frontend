@@ -1,0 +1,98 @@
+{
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "mainDiv" :
+        {
+            "hero" : 
+                {
+                    "mobile" : "./ressources/assets/images/illustration-sign-up-mobile.svg",
+                    "desk" : "./ressources/assets/images/illustration-sign-up-desktop.svg"
+
+                },
+            "TEXT" :
+                {
+                    "h1" : "Stay updated!",
+                    "paragraph" : "Join 60,000+ product managers receiving monthly updates on:",
+                    "list_ico" : "./ressources/assets/images/icon-list.svg",
+                    "checklist" :
+                        [
+                            "Product discovery and building what matters",
+                            "Measuring to ensure updates are a success",
+                            "And much more!"
+                        ],
+                    "form":
+                        {
+                            "label" : "Email address",
+                            "input" :
+                                {
+                                    "type" : "text",
+                                    "placeholder" : "email@company.com"
+                                },
+                            "btn" :
+                                {
+                                    "type" : "submit",
+                                    "value" : "Subscribe to monthly newsletter"
+                                },
+                            "error": "Valid email required"
+                        },
+                    "success" :
+                        {
+                            "success_ico" : "./ressources/assets/images/icon-success.svg",
+                            "h1": "Thanks for subscribing!",
+                            "paragraph" : "A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.",
+                            "btn" : 
+                                {
+                                    "type" : "button",
+                                    "value" : "Dismiss message"
+                                }
+                        }
+                }
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "frontend" :
+                {
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}

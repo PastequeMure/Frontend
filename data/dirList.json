@@ -1,5 +1,4 @@
 [
-  "Results-Summary-Components",
   "Product-preview",
   "Interactive-rating-component",
   "Qr-Code-Component",
@@ -16,5 +15,7 @@
   "intro-component-with-signup-form-master",
   "single-price-grid-component-master",
   "ping-coming-soon-page-master",
-  "huddle-landing-page-with-single-introductory-section-master"
+  "huddle-landing-page-with-single-introductory-section-master",
+  "Results-Summary-Components",
+  "newsletter-sign-up-with-success-message-main"
 ]
