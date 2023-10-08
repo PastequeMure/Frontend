@@ -1,0 +1,65 @@
+{
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "mainDiv" :
+        {
+            "logo" : "./ressources/assets/images/logo.svg",
+            "illustration": "./ressources/assets/images/illustration-mockups.svg",
+            "h1" : "Build The Community Your Fans Will Love",
+            "p" : "Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.",
+            "button" : "Register",
+            "socials": 
+                [
+                    "./ressources/assets/images/facebook.svg",
+                    "./ressources/assets/images/instagram.svg",
+                    "./ressources/assets/images/twitter.svg"
+                ]
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "frontend" :
+                {
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}

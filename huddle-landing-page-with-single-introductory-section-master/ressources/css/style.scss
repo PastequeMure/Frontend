@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --navBg : hsl(257, 40%, 49%);
+    --navColor: white;
+    --navHover: hsl(300, 69%, 71%);
+
+    --footBg : hsl(257, 40%, 49%);
+    --footColor : white;
+    --footLink : white;
+    --footHover : hsl(300, 69%, 71%);
+
+    --primary-1 : hsl(257, 40%, 49%);
+    --primary-2 : hsl(300, 69%, 71%);
+}
+
+body {
+    margin: 0;
+    background-image: url(../assets/images/bg-mobile.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    background-color: var(--primary-1);
+    color: white;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        background: var(--navBg);
+        top: 0;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        z-index: 5;
+        
+        a {
+            display: block;
+            margin-left: 10px;
+
+            img {
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+            }
+
+            img:hover {
+                transform: rotate(-90deg);
+                transition: all 0.3s;
+            }
+
+            img:not(:hover) {
+                transition: all 0.3s;
+            }
+        }
+
+        ul{
+            display: grid;
+            width: 100%;
+            grid-auto-flow: column;
+            gap: 10px;
+            list-style-type: none;
+            margin-left: -30px; 
+            margin-right: 30px; 
+
+            li {
+                display: flex;
+                flex-grow: 1;
+                justify-content: center;
+                align-items: center;
+                a{
+                    cursor: pointer;
+                    color: var(--navColor);
+                    text-decoration: none;
+
+                    span {
+                        text-align: center;
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    span::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -5px; 
+                        width: 100%;
+                        height: 1px;
+                        border-radius: 50px;
+                        background: var(--navHover);
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.3s ease-in-out;
+                    }
+                }
+
+                a:hover {
+                    cursor: pointer;
+                    color: var(--navHover);
+                    transition: all 0.3s ease-in-out;
+                    span::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+
+                a:not(:hover) {
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .challenge {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background: var(--footBg);
+        color: var(--footColor);
+
+        p {
+            flex-wrap: wrap;
+            font-size: x-small;
+            text-align: center;
+        }
+
+        p:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        p:not(:hover) {
+            transition: all 0.3s ease-in-out;
+        }
+
+        a {
+            margin-left: 5px;
+            color: var(--footLink);
+            margin-right: 5px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--footHover);
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:not(:hover) {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .main {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,10vh);
+        width: 90%;
+        .logo {
+            img {
+                width: 40%;
+            }
+        }
+        .illustration {
+            padding: 20px;
+            img {
+                width: 90%;
+            }
+        }
+        .data {
+            padding: 10px;
+            text-align: center;
+
+            h1 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.7em;
+                font-weight: 600;
+            }
+            p{
+                padding: 20px;
+                font-family: 'Open sans', sans-serif;
+                font-size: 1em;
+            }
+            button {
+                font-family: 'Poppins', 'sans-serif';
+                font-weight: 400;
+                color: var(--primary-1);
+                border: unset;
+                width: 60%;
+                padding: 10px;
+                border-radius: 40px;
+                box-shadow: 0px 5px 20px 0px #333;
+            }
+            button:hover {
+                cursor: pointer;
+                color: white;
+                background-color: var(--primary-2);
+                transition: all 0.3s ease-in-out;
+            }
+            button:not(:hover) {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        .socials {
+            position: absolute;
+            left: -50vw;
+            bottom:-18%;
+            transform: translate(60vw);
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+
+            li {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50px;
+                border: 1px solid white;
+                margin-left: 5vw;
+
+                a {
+                    svg {
+                        fill: white;
+                    }
+                }
+            }
+
+            li:hover {
+                border: 1px solid var(--primary-2);
+                transition: all 0.3s ease-in-out;
+                a svg {
+                    fill: var(--primary-2);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            li:not(:hover) {
+                transition: all 0.3s ease-in-out;
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    body {
+        overflow: hidden;
+        background-image: url(../assets/images/bg-desktop.svg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: var(--primary-1);
+        .main {
+            display: grid;
+            width: 100%;
+            grid-template-rows: 0.2fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            align-items: center;
+
+            .logo {
+                margin-left: 15px;
+                grid-row: 1;
+                width: 100%;
+            }
+            .illustration {
+                grid-row: 2;
+                grid-column: 1;
+                width: 50vw;
+            }
+            .data{
+                margin-top: -150px;
+                grid-row: 2;
+                grid-column: 2;
+                text-align: left;
+                width: 70%;
+                h1 {
+                    font-size: 3em;
+                }
+                p{
+                    padding-left: unset;
+                    width: 80%;
+                }
+                button {
+                    padding: 15px;
+                    width: 40%;
+                    font-size: 1em;
+                }
+            }
+            .socials{
+                left: unset;
+                right: 3%;
+                transform: unset;
+                bottom: 95%;
+                grid-row: 3;
+                li {
+                    margin-left: 15px !important;
+                }
+            }
+        }
+    }
+}
