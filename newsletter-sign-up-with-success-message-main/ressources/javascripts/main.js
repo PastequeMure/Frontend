@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     successTextDiv.appendChild(successH1);
 
                     const successPara = document.createElement('p')
-                    successPara.innerText = data.mainDiv.TEXT.success.paragraph.replace('ash@loremcompany.com', mailValue)
+                    successPara.innerHTML = data.mainDiv.TEXT.success.paragraph.replace('ash@loremcompany.com',`<strong>${mailValue}</strong>`)
                     successTextDiv.appendChild(successPara);
 
                 const successBtn = document.createElement('button');
@@ -219,6 +219,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 successBtn.innerText = data.mainDiv.TEXT.success.btn.value;
                 successBtn.setAttribute('id','dismiss-btn')
                 successSection.appendChild(successBtn)
+                if(window.innerWidth > 720) {
+                    body.classList.add('successBody')
+                }
 
             }            
             if(mailValue.length !== 0) {
@@ -236,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const getSuccessSection = document.getElementById('success-section')
                                 getMainDiv.removeChild(getSuccessSection);
                                 getSection.style.display = 'block'
+                                body.classList.remove('successBody')
                             }
                         })
                     break;

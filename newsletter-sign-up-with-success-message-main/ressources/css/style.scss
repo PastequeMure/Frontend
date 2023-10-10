@@ -17,6 +17,10 @@
     --neutral-4 : hsl(0, 0%, 100%);
 }
 
+.successBody {
+    background-color: var(--neutral-3);
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -301,6 +305,67 @@ body {
             }
             button:not(:hover) {
                 transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:720px) {
+    body {
+        .main {
+            width: 90% !important;
+            .subscription-section {
+                display: flex;
+                padding: 10px;
+                height: 80vh;
+                .hero {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+                .data {
+                    position: relative;
+                    top: 5%;
+
+                    .checklist {
+                        margin-left: -5% !important;
+                    }
+                }
+                .subscription {
+                    position: absolute;
+                    bottom: 10vh;
+                    width: 45%;
+
+                    button {
+                        margin-top: 2vh;
+                    }
+                }
+            }
+            .success-section {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: var(--neutral-4);
+                height: 40vh;
+                width: 30vw;
+                border-radius: 10px;
+                padding: 30px;
+
+                .success-text {
+                    width: unset;
+                }
+                h1{
+                    font-size: 70px;
+                }
+                p{
+                    width: unset !important;
+                }
+                button {
+                    width: 100%;
+                    position: unset;
+                }
             }
         }
     }

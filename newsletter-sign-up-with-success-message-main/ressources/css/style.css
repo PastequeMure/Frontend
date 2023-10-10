@@ -14,6 +14,10 @@
   --neutral-4: hsl(0, 0%, 100%);
 }
 
+.successBody {
+  background-color: var(--neutral-3);
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -270,4 +274,60 @@ body .main .success-section button:hover {
 }
 body .main .success-section button:not(:hover) {
   transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 720px) {
+  body .main {
+    width: 90% !important;
+  }
+  body .main .subscription-section {
+    display: flex;
+    padding: 10px;
+    height: 80vh;
+  }
+  body .main .subscription-section .hero {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  body .main .subscription-section .data {
+    position: relative;
+    top: 5%;
+  }
+  body .main .subscription-section .data .checklist {
+    margin-left: -5% !important;
+  }
+  body .main .subscription-section .subscription {
+    position: absolute;
+    bottom: 10vh;
+    width: 45%;
+  }
+  body .main .subscription-section .subscription button {
+    margin-top: 2vh;
+  }
+  body .main .success-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--neutral-4);
+    height: 40vh;
+    width: 30vw;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  body .main .success-section .success-text {
+    width: unset;
+  }
+  body .main .success-section h1 {
+    font-size: 70px;
+  }
+  body .main .success-section p {
+    width: unset !important;
+  }
+  body .main .success-section button {
+    width: 100%;
+    position: unset;
+  }
 }/*# sourceMappingURL=style.css.map */
