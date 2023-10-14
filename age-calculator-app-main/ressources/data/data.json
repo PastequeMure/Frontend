@@ -1,0 +1,95 @@
+{
+    "title": "Frontend | Age Calculator App",
+    "navbar" : 
+        {
+            "img" :
+                {
+                    "imgUrl" : "./ressources/assets/images/main.webp",
+                    "imgAlt" : "home"
+                },
+            "links":
+                [
+                        {
+                            "url" : "./ressources/assets/render/desktop-design.jpg",
+                            "target" : "_blank",
+                            "text" : "Desktop Model"
+                        },
+                    
+                        {
+                            "url" : "./ressources/assets/render/mobile-design.jpg",
+                            "target":"_blank",
+                            "text" : "Mobile Model"
+                        },
+                        {
+                            "url" : "https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q",
+                            "target":"_blank",
+                            "text" : "Challenge"
+                        }
+                ]
+
+        },
+    "mainDiv" :
+        {
+            "form": 
+                [
+                    {
+                        "label" : "days",
+                        "input" :
+                            {
+                                "type" : "number",
+                                "placeholder" : "dd"
+                            }
+                    },
+                    {
+                        "label" : "months",
+                        "input" : 
+                            {
+                                "type" : "number",
+                                "placeholder" : "mm"
+                            }
+                    },
+                    {
+                        "label" : "years",
+                        "input" :
+                            {
+                                "type" : "number",
+                                "placeholder" : "yyyy"
+                            }
+                    }
+                ],
+            "arrow" : "./ressources/assets/images/icon-arrow.svg",
+            "results":
+                [
+                    "years",
+                    "months",
+                    "days"
+                ],
+            "errors":
+                {
+                    "empty" : "This field is required",
+                    "whole" : "Must be a valid date",
+                    "invalid" : "Must be a valid"
+                }
+        },
+    "footer": 
+        {
+            "p" :
+                [
+                    "Challenge by",
+                    "Coded by"
+                ],
+            "frontend" :
+                {
+                    "url": "https://www.frontendmentor.io?ref=challenge",
+                    "target" : "_blank",
+                    "text" : "Frontend Mentor"
+                },
+            "dev" :
+                {
+                    "url" : "https://github.com/PastequeMure",
+                    "target" : "_blank",
+                    "text" : "Pastèque Mûre"
+                }
+                
+        }
+}
