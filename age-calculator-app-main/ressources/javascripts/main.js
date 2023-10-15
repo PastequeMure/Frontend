@@ -208,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const getYearResult = document.getElementById('years-value');
                     const getMonthResult = document.getElementById('months-value');
                     const getDayResult = document.getElementById('days-value');
-                    console.log(getMonthResult,getYearResult,getDayResult)
                     if(fullValid) {
                         function calculateAge(birthDate, currentDate) {
                             const birthDateObj = new Date(birthDate);
@@ -227,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const age = calculateAge(inputDate, today);
                         const isNumber = (!isNaN(age.days) && !isNaN(age.months) && !isNaN(age.years)) ? true : false;
                         if(isNumber) {
-                            const getYearSpan = document.getElementById('year-span');
+                            const getYearSpan = document.getElementById('years-span');
                             if(age.years >= 0) {
                                 getYearResult.innerText = age.years;
                                 getMonthResult.innerText = age.months;
