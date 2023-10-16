@@ -300,5 +300,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 GetScreenWidth();
                 window.addEventListener('resize', GetScreenWidth);
+
+                const getLogo = document.querySelector('.logo');
+                getLogo.addEventListener('click', () => {
+                    window.location.href = ".."
+                })
     })
 })

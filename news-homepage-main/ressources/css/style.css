@@ -28,6 +28,9 @@ body header {
   grid-template-columns: 0.5fr 1.5fr;
   margin-bottom: 5vh;
 }
+body header .logo:hover {
+  cursor: pointer;
+}
 body header .nav-links {
   list-style-type: none;
   display: flex;
@@ -120,7 +123,6 @@ body .image-article {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5%;
   position: relative;
-  left: 25%;
 }
 body .image-article .image-article-child {
   display: grid;

@@ -29,6 +29,9 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1.5fr;
         margin-bottom: 5vh;
+        .logo:hover {
+            cursor: pointer;
+        }
         .nav-links {
             list-style-type: none;
             display: flex;
@@ -122,13 +125,11 @@ body {
         }
     }
     .image-article {
-
         margin-top: 5vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:5%;
         position: relative;
-        left:25%;
         .image-article-child{
             display: grid;
             grid-template-columns: 0.10fr 0.60fr;
