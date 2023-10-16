@@ -133,6 +133,7 @@ body {
         .image-article-child{
             display: grid;
             grid-template-columns: 0.10fr 0.60fr;
+            align-items: center;
             .img-container {
                 img {
                     height: 200px;

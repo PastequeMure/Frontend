@@ -127,6 +127,7 @@ body .image-article {
 body .image-article .image-article-child {
   display: grid;
   grid-template-columns: 0.1fr 0.6fr;
+  align-items: center;
 }
 body .image-article .image-article-child .img-container img {
   height: 200px;
