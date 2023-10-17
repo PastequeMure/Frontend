@@ -144,7 +144,10 @@ body .image-article .image-article-child .details h2 {
 body .image-article .image-article-child .details h3 {
   transition: color 0.3s ease-in-out;
 }
-body .image-article .image-article-child .details:hover h3 {
+body .image-article .image-article-child:hover {
+  cursor: pointer;
+}
+body .image-article .image-article-child:hover .details h3 {
   color: var(--primary-1);
 }
 body .image-article .image-article-child:last-child {
