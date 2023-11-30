@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --primary-1: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --primary-2: hsl(0, 100%, 66%);
+  --neutral-1: hsl(0, 0%, 100%);
+  --neutral-2: hsl(270, 3%, 87%);
+  --neutral-3: hsl(279, 6%, 55%);
+  --neutral-4: hsl(278, 68%, 11%);
+}
+
+* {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */

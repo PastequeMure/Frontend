@@ -223,6 +223,10 @@ body .main .formDiv form label input {
   padding: 15px;
   border: 1px solid var(--grayish-blue);
 }
+body .main .formDiv form label input::-moz-placeholder {
+  color: var(--dark-blue);
+  font-family: var(--bold);
+}
 body .main .formDiv form label input::placeholder {
   color: var(--dark-blue);
   font-family: var(--bold);

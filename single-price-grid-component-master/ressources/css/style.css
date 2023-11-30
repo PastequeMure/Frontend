@@ -145,6 +145,7 @@ body .main {
   transform: translate(-50%);
   border-radius: 5px;
   width: 80%;
+  height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
 }

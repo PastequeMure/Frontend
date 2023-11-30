@@ -166,6 +166,9 @@ body .main .formDiv form label input {
   width: 90%;
   border: 1px solid var(--pale-blue);
 }
+body .main .formDiv form label input::-moz-placeholder {
+  color: var(--pale-blue);
+}
 body .main .formDiv form label input::placeholder {
   color: var(--pale-blue);
 }
