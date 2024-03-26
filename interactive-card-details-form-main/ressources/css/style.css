@@ -12,4 +12,82 @@
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
+}
+
+body {
+  background: url(../assets/images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .cards .frontcard {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 447px;
+  height: 245px;
+  background: url(../assets/images/bg-card-front.png);
+  background-size: 100% 100%;
+}
+body .cards .frontcard .layout-front {
+  display: grid;
+  height: 100%;
+  color: var(--neutral-1);
+}
+body .cards .frontcard .layout-front .top {
+  padding-top: 25px;
+  padding-left: 35px;
+}
+body .cards .frontcard .layout-front .middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .cards .frontcard .layout-front .middle p {
+  font-size: 28px;
+  letter-spacing: 0.2ch;
+}
+body .cards .frontcard .layout-front .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .cards .frontcard .layout-front .bottom .left {
+  margin-left: 40px;
+}
+body .cards .frontcard .layout-front .bottom .right {
+  margin-right: 40px;
+}
+body .cards .backcard {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 447px;
+  height: 245px;
+  color: var(--neutral-1);
+  background: url(../assets/images/bg-card-back.png);
+  background-size: 100% 100%;
+}
+body .cards .backcard p {
+  position: relative;
+  top: 45%;
+  left: 75%;
+}
+body .form form label {
+  text-transform: uppercase;
+}
+body .form form div {
+  display: grid;
+}
+body .form form .bottom-form .exp-date {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .form form .bottom-form .exp-date label {
+  width: 100%;
+}
+body .form form .bottom-form .exp-date input {
+  display: flex;
+  width: 40%;
 }/*# sourceMappingURL=style.css.map */

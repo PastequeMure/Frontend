@@ -9,5 +9,48 @@
     <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
+    <section class="cards" id="cards">
+        <div id="frontcard" class="frontcard">
+            <div class="layout-front">
+                <div class="top">
+                    <img src="./ressources/assets/images/card-logo.svg" alt="card-logo">
+                </div>
+                <div class="middle">
+                    <p>0000 0000 0000 0000</p>
+                </div>
+                <div class="bottom">
+                    <div class="left" id="frontcard-bottom-left">Name</div>
+                    <div class="right" id="frontcard-bottom-right">00/00</div>
+                </div>
+            </div>
+        </div>
+        <div id="backcard" class="backcard">
+            <p id="cvc">000</p>
+        </div>
+    </section>
+    <section id="form" class="form">
+        <form id="card-data">
+            <div class="top-form">
+                <label for="name">cardholder name</label>
+                <input type="text" placeholder="e.g. Jane Appleseed" id="name">
+            </div>
+            <div class="middle-form">
+                <label for="card-number">card number</label>
+                <input type="text" name="card-number" id="card-number" placeholder="1234 5678 9123 0000">
+            </div>
+            <div class="bottom-form">
+                <div class="exp-date">
+                    <label for="exp-date">exp date (mm/yy)</label>
+                    <input type="number" name="exp-date-month" id="exp-date" placeholder="MM" max="12" min="1">
+                    <input type="number" name="exp-date-year" id="exp-date" placeholder="YY" max="99" min="1">
+                </div>
+                <div class="cvc">
+                    <label for="cvc">cvc</label>
+                    <input type="number" name="cvc" id="cvc" placeholder="e.g 123" min="100" max="999">
+                </div>
+            </div>
+            <button type="submit" id="submit-form">Confirm</button>
+        </form>
+    </section>
 </body>
 </html>
